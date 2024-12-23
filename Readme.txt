@@ -24,6 +24,17 @@ info variables : Print all global variables
 print &<varable> : Print address of variable
 print *<pointer> : Print pointer contents
 
+For checking memory leaks
+valgrind --tool=memcheck --leak-check=full --show-leak-kinds=all --track-origins=yes ./your_program
+
+Heap memory profiler
+valgrind --tool=massif --massif-out-file=<file> --heap-analysis=full ./your_program
+
+Profiling tool to analyze the performance
+valgrind --tool=callgrind ./your_program
+
+Multi threading related issues
+valgrind --tool=helgrind ./your_program
 backtrace full : Show call stack
 info frame : Show current frame
 frame frame_num : Switch frame
