@@ -31,6 +31,7 @@ frame frame_num : Switch frame
 x/4x address : Examine memory ( 4 units )
 
 gdb -p <pid_of_running_process> : To attach to a running process
+The program will pause and can be run step wise using gdb. On detaching, the program will continue running.
 detach : detach from a running process
 
 ---- Valgrind
