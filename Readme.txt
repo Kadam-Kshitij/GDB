@@ -30,7 +30,8 @@ frame frame_num : Switch frame
 
 x/4x address : Examine memory ( 4 units )
 
-
+gdb -p <pid_of_running_process> : To attach to a running process
+detach : detach from a running process
 
 ---- Valgrind
 For checking memory leaks
