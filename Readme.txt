@@ -38,12 +38,12 @@ detach : detach from a running process
 For checking memory leaks
 valgrind --tool=memcheck --leak-check=full --show-leak-kinds=all --track-origins=yes ./your_program
 
-Heap memory profiler
+Heap memory profiler - Used for memory snapshots, peak memory
 valgrind --tool=massif --massif-out-file=<file> --heap-analysis=full ./your_program
 ms_print <file>
 
-Profiling tool to analyze the performance
+Profiling tool to analyze the performance - Function calls
 valgrind --tool=callgrind ./your_program
 
-Multi threading related issues
+Multi threading related issues - Used to check for thread race conditions
 valgrind --tool=helgrind ./your_program
