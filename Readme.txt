@@ -40,6 +40,7 @@ valgrind --tool=memcheck --leak-check=full --show-leak-kinds=all --track-origins
 
 Heap memory profiler
 valgrind --tool=massif --massif-out-file=<file> --heap-analysis=full ./your_program
+ms_print <file>
 
 Profiling tool to analyze the performance
 valgrind --tool=callgrind ./your_program
